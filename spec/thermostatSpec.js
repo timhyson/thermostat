@@ -13,12 +13,12 @@ describe('Thermostat', function() {
     });
 
     it('can be increased', function() {
-      thermostat.temperatureRaise()
+      thermostat.temperatureRaise();
       expect(thermostat.temperature).toEqual(21);
     });
 
     it('can be decreased', function() {
-      thermostat.temperatureLower()
+      thermostat.temperatureLower();
       expect(thermostat.temperature).toEqual(19);
     });
 
@@ -27,11 +27,16 @@ describe('Thermostat', function() {
     });
 
     it('cannot be lowered below min temp', function() {
-      var diff = (thermostat.temperature - thermostat.minTemp)
-      for (var i = diff; i>0; i--) {
-        thermostat.temperatureLower()
+      var diff = (thermostat.temperature - thermostat.minTemp);
+      for (diff; diff > 0; diff--) {
+        thermostat.temperatureLower();
       };
-      expect(function() {thermostat.temperatureLower()}).toThrowError("At minimum temperature")
+
+      expect(function() {thermostat.temperatureLower();}).toThrowError('At minimum temperature');
+    });
+
+    it('has a maximum temperature of 25 degrees', function() {
+      expect(thermostat.maxTemp).toEqual(25);
     });
 
   });
