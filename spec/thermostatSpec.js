@@ -43,6 +43,16 @@ describe('Thermostat', function() {
       expect(thermostat.isPowerSavingOn).toBe(true);
     });
 
+    it('power saving mode can be switched off', function() {
+      thermostat.togglePowerSaving();
+      expect(thermostat.isPowerSavingOn).toBe(false);
+    });
+
+    it('has a maximum temperature of 32 if power saving mode is off', function() {
+      thermostat.togglePowerSaving();
+      expect(thermostat.maxTemp).toEqual(32);
+    });
+
   });
 
 });
