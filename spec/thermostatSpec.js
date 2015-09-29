@@ -35,6 +35,16 @@ describe('Thermostat', function() {
       expect(function() {thermostat.temperatureLower();}).toThrowError('At minimum temperature');
     });
 
+    it('cannot be raised above max temp', function() {
+      var diff = (thermostat.maxTemp - thermostat.temperature);
+      for (diff; diff > 0; diff--) {
+        thermostat.temperatureRaise();
+        console.log(thermostat.temperature)
+      };
+
+      expect(function() {thermostat.temperatureRaise();}).toThrowError('At maximum temperature');
+    });
+
     it('has a maximum temperature of 25 degrees', function() {
       expect(thermostat.maxTemp).toEqual(25);
     });
