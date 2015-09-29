@@ -53,6 +53,12 @@ describe('Thermostat', function() {
       expect(thermostat.maxTemp).toEqual(32);
     });
 
+    it('max temp falls back to 25 when power saving turned back on', function() {
+      thermostat.togglePowerSaving();
+      thermostat.togglePowerSaving();
+      expect(thermostat.maxTemp).toEqual(25);
+    });
+
   });
 
 });
