@@ -7,19 +7,25 @@ function Thermostat() {
 
 Thermostat.prototype.temperatureRaise = function() {
   if (this.temperature === this.maxTemp) {
-    throw new Error("At maximum temperature");
+    throw new Error('At maximum temperature');
   };
+
   this.temperature++;
 };
 
 Thermostat.prototype.temperatureLower = function() {
   if (this.temperature === this.minTemp) {
-    throw new Error("At minimum temperature");
+    throw new Error('At minimum temperature');
   };
+
   this.temperature--;
 };
 
 Thermostat.prototype.togglePowerSaving = function() {
   this.isPowerSavingOn = !this.isPowerSavingOn;
   this.maxTemp = this.isPowerSavingOn ? 25 : 32;
+};
+
+Thermostat.prototype.reset = function() {
+  this.temperature = 20;
 };
