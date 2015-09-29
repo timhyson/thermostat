@@ -8,5 +8,8 @@ Thermostat.prototype.temperatureRaise = function() {
 };
 
 Thermostat.prototype.temperatureLower = function() {
+  if (this.temperature === this.minTemp) {
+    throw new Error("At minimum temperature");
+  };
   this.temperature--;
 };

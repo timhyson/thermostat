@@ -26,6 +26,14 @@ describe('Thermostat', function() {
       expect(thermostat.minTemp).toEqual(10);
     });
 
+    it('cannot be lowered below min temp', function() {
+      var diff = (thermostat.temperature - thermostat.minTemp)
+      for (var i = diff; i>0; i--) {
+        thermostat.temperatureLower()
+      };
+      expect(function() {thermostat.temperatureLower()}).toThrowError("At minimum temperature")
+    });
+
   });
 
 });
