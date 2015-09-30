@@ -38,3 +38,5 @@ Thermostat.prototype.changeColour = function() {
   if (this.temperature < 18) {this.colour = 'green';}
   else if (this.temperature > 25) {this.colour = 'red';}
 };
+
+// thermostat = new Thermostat;

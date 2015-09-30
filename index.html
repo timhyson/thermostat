@@ -1,37 +1,36 @@
 <!DOCTYPE html>
 <html>
+
   <head>
    <title>Thermostat</title>
   </head>
 
-
   <body>
-
     <p id='show_temperature'>  </p> degrees
-
-
     <div class="container">
-        <button class="up" type="button"> UP</button>
-        <button class="down"type="button">DOWN</button>
-        <button class="reset" type="button">Reset</button>
-        <input class="power_save" type="checkbox" checked>Power saving mode</button>
+      <button id='up' type="button"> UP</button>
+      <button class="down" type="button">DOWN</button>
+      <button class="reset" type="button">Reset</button>
+      <input class="power_save" type="checkbox" checked>Power saving mode</button>
     </div>
 
+    <script src='jquery.js'></script>
 
-      <script src ='jquery.js'></script>
-      <script>
-      $( document ).ready(function() {
+    <script>
+    $( document ).ready(function() {
+      var thermostat = new Thermostat();
 
-        var thermostat = new Thermostat();
+      $('#show_temperature').text(thermostat.temperature);
 
+      $('#up').click(function() {
+        thermostat.temperatureRaise();
         $('#show_temperature').text(thermostat.temperature);
-
-
       });
 
-      </script>
+    });
+    </script>
+
   </body>
-  <script src ='src/Thermostat.js'></script>
 
-
+  <script src='src/Thermostat.js'></script>
 </html>
