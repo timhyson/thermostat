@@ -9,9 +9,9 @@
     <p id='show_temperature'>  </p> degrees
     <div class="container">
       <button id='up' type="button"> UP</button>
-      <button class="down" type="button">DOWN</button>
-      <button class="reset" type="button">Reset</button>
-      <input class="power_save" type="checkbox" checked>Power saving mode</button>
+      <button id="down" type="button">DOWN</button>
+      <button id="reset" type="button">Reset</button>
+      <input id="power_save" type="checkbox" checked>Power saving mode</button>
     </div>
 
     <script src='jquery.js'></script>
@@ -24,6 +24,11 @@
 
       $('#up').click(function() {
         thermostat.temperatureRaise();
+        $('#show_temperature').text(thermostat.temperature);
+      });
+
+      $('#down').click(function() {
+        thermostat.temperatureLower();
         $('#show_temperature').text(thermostat.temperature);
       });
 
