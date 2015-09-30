@@ -28,6 +28,12 @@ Thermostat.prototype.temperatureLower = function() {
 Thermostat.prototype.togglePowerSaving = function() {
   this.isPowerSavingOn = !this.isPowerSavingOn;
   this.maxTemp = this.isPowerSavingOn ? 25 : 32;
+  // if (this.temperature > this.maxTemp) {
+  //   this.temperature = this.maxTemp;
+  // };
+
+  (this.temperature > this.maxTemp) ? this.temperature = this.maxTemp : this.temperature;
+  // this.temperature = this.maxTemp if this.temperature > this.maxTemp;
 };
 
 Thermostat.prototype.reset = function() {
@@ -38,5 +44,3 @@ Thermostat.prototype.changeColour = function() {
   if (this.temperature < 18) {this.colour = 'green';}
   else if (this.temperature > 25) {this.colour = 'red';}
 };
-
-// thermostat = new Thermostat;

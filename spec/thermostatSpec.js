@@ -68,6 +68,15 @@ describe('Thermostat', function() {
       expect(thermostat.maxTemp).toEqual(25);
     });
 
+    it('resets temperature to 25 when power mode switched on if current temp > 25', function() {
+      thermostat.togglePowerSaving();
+      for (var i = 0; i < 10; i++) {
+        thermostat.temperatureRaise();
+      };
+      thermostat.togglePowerSaving();
+      expect(thermostat.temperature).toEqual(25);
+    });
+
     it('temperature can be reset to 20', function() {
       thermostat.temperatureRaise();
       thermostat.reset();
