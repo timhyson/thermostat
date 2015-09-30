@@ -88,13 +88,9 @@ describe('Thermostat', function() {
 
     it('displays in red if temp above 25', function() {
       thermostat.togglePowerSaving();
+      for (var i = 0; i < 6; i++) {
       thermostat.temperatureRaise();
-      thermostat.temperatureRaise();
-      thermostat.temperatureRaise();
-      thermostat.temperatureRaise();
-      thermostat.temperatureRaise();
-      thermostat.temperatureRaise();
-      console.log(thermostat.temperature);
+      };
       expect(thermostat.colour).toEqual('red');
     });
 
