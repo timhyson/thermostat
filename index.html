@@ -32,6 +32,11 @@
         $('#show_temperature').text(thermostat.temperature);
       });
 
+      $('#power_save').click(function() {
+        thermostat.togglePowerSaving();
+        $('#show_temperature').text(thermostat.temperature);
+      });
+
     });
     </script>
 
