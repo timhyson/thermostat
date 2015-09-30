@@ -6,22 +6,32 @@
 
 
   <body>
-      <h1 id='Thermostat'>Thermostat</h1>
+
+    <p id='show_temperature'>  </p> degrees
+
 
     <div class="container">
-        <section class ="temp"><span class="temperature" data-color=""></span>° C</section>
-        <section class="buttons">
         <button class="up" type="button"> UP</button>
         <button class="down"type="button">DOWN</button>
         <button class="reset" type="button">Reset</button>
         <input class="power_save" type="checkbox" checked>Power saving mode</button>
-        <section class="buttons">
     </div>
 
 
+      <script src ='jquery.js'></script>
+      <script>
+      $( document ).ready(function() {
 
-    <script src='jquery.js'></script>
-    <script src='src/Thermostat.js'></script>
+        var thermostat = new Thermostat();
+
+        $('#show_temperature').text(thermostat.temperature);
+
+
+      });
+
+      </script>
   </body>
+  <script src ='src/Thermostat.js'></script>
+
 
 </html>
