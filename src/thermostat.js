@@ -28,12 +28,9 @@ Thermostat.prototype.temperatureLower = function() {
 Thermostat.prototype.togglePowerSaving = function() {
   this.isPowerSavingOn = !this.isPowerSavingOn;
   this.maxTemp = this.isPowerSavingOn ? 25 : 32;
-  // if (this.temperature > this.maxTemp) {
-  //   this.temperature = this.maxTemp;
-  // };
+  if (this.temperature > this.maxTemp) {this.temperature = this.maxTemp};
 
-  (this.temperature > this.maxTemp) ? this.temperature = this.maxTemp : this.temperature;
-  // this.temperature = this.maxTemp if this.temperature > this.maxTemp;
+  // (this.temperature > this.maxTemp) ? this.temperature = this.maxTemp : this.temperature;
 };
 
 Thermostat.prototype.reset = function() {
