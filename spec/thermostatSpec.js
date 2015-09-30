@@ -73,6 +73,7 @@ describe('Thermostat', function() {
       for (var i = 0; i < 10; i++) {
         thermostat.temperatureRaise();
       };
+
       thermostat.togglePowerSaving();
       expect(thermostat.temperature).toEqual(25);
     });
@@ -89,7 +90,7 @@ describe('Thermostat', function() {
 
     it('displays in green if temp below 18', function() {
       for (var i = 0; i < 3; i++) {
-      thermostat.temperatureLower();
+        thermostat.temperatureLower();
       };
 
       expect(thermostat.colour).toEqual('green');
@@ -98,8 +99,9 @@ describe('Thermostat', function() {
     it('displays in red if temp above 25', function() {
       thermostat.togglePowerSaving();
       for (var i = 0; i < 6; i++) {
-      thermostat.temperatureRaise();
+        thermostat.temperatureRaise();
       };
+
       expect(thermostat.colour).toEqual('red');
     });
 
