@@ -74,7 +74,7 @@ describe('Thermostat', function() {
       expect(thermostat.temperature).toEqual(20);
     });
 
-    it('displays in red', function() {
+    it('displays in yellow', function() {
       expect(thermostat.colour).toEqual('yellow');
     });
 
@@ -84,6 +84,18 @@ describe('Thermostat', function() {
       thermostat.temperatureLower();
       console.log(thermostat.temperature);
       expect(thermostat.colour).toEqual('green');
+    });
+
+    it('displays in red if temp above 25', function() {
+      thermostat.togglePowerSaving();
+      thermostat.temperatureRaise();
+      thermostat.temperatureRaise();
+      thermostat.temperatureRaise();
+      thermostat.temperatureRaise();
+      thermostat.temperatureRaise();
+      thermostat.temperatureRaise();
+      console.log(thermostat.temperature);
+      expect(thermostat.colour).toEqual('red');
     });
 
   });

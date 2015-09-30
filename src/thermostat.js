@@ -12,6 +12,8 @@ Thermostat.prototype.temperatureRaise = function() {
   };
 
   this.temperature++;
+  this.changeColour();
+
 };
 
 Thermostat.prototype.temperatureLower = function() {
@@ -33,8 +35,6 @@ Thermostat.prototype.reset = function() {
 };
 
 Thermostat.prototype.changeColour = function() {
-  if (this.temperature < 18) {
-    this.colour = 'green';
-  }
-
+  if (this.temperature < 18) {this.colour = 'green';}
+  else if (this.temperature > 25) {this.colour = 'red';}
 };
