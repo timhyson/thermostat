@@ -39,7 +39,6 @@ describe('Thermostat', function() {
       var diff = (thermostat.maxTemp - thermostat.temperature);
       for (diff; diff > 0; diff--) {
         thermostat.temperatureRaise();
-        console.log(thermostat.temperature)
       };
 
       expect(function() {thermostat.temperatureRaise();}).toThrowError('At maximum temperature');
@@ -73,6 +72,18 @@ describe('Thermostat', function() {
       thermostat.temperatureRaise();
       thermostat.reset();
       expect(thermostat.temperature).toEqual(20);
+    });
+
+    it('displays in red', function() {
+      expect(thermostat.colour).toEqual('yellow');
+    });
+
+    it('displays in green if temp below 18', function() {
+      thermostat.temperatureLower();
+      thermostat.temperatureLower();
+      thermostat.temperatureLower();
+      console.log(thermostat.temperature);
+      expect(thermostat.colour).toEqual('green');
     });
 
   });

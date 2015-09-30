@@ -3,6 +3,7 @@ function Thermostat() {
   this.minTemp = 10;
   this.maxTemp = 25;
   this.isPowerSavingOn = true;
+  this.colour = 'yellow';
 };
 
 Thermostat.prototype.temperatureRaise = function() {
@@ -19,6 +20,7 @@ Thermostat.prototype.temperatureLower = function() {
   };
 
   this.temperature--;
+  this.changeColour();
 };
 
 Thermostat.prototype.togglePowerSaving = function() {
@@ -28,4 +30,11 @@ Thermostat.prototype.togglePowerSaving = function() {
 
 Thermostat.prototype.reset = function() {
   this.temperature = 20;
+};
+
+Thermostat.prototype.changeColour = function() {
+  if (this.temperature < 18) {
+    this.colour = 'green';
+  }
+
 };
