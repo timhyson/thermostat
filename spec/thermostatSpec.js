@@ -79,10 +79,10 @@ describe('Thermostat', function() {
     });
 
     it('displays in green if temp below 18', function() {
+      for (var i = 0; i < 3; i++) {
       thermostat.temperatureLower();
-      thermostat.temperatureLower();
-      thermostat.temperatureLower();
-      console.log(thermostat.temperature);
+      };
+
       expect(thermostat.colour).toEqual('green');
     });
 
