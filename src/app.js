@@ -3,7 +3,7 @@ $(document).ready(function() {
 
   var display = function() {
     $('#show_temperature').text(thermostat.temperature);
-    $('#show_temperature').css('color', thermostat.changeColour());
+    $('#colour').css('color', thermostat.changeColour());
   };
 
   display();
