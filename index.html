@@ -1,31 +1,3 @@
-<!DOCTYPE html>
-<!-- <html>
-
-  <head>
-   <title>Thermostat</title>
-   <link rel="stylesheet" href="./css/bootstrap.css"/>
-  </head>
-
-  <body>
-    <div class='container-fluid'>
-      <div class='row'>
-        <div>
-        <h1><span id='show_temperature'></span> degrees</h1>
-        <button id='up' type="button"> UP</button>
-        <button id="down" type="button">DOWN</button>
-      </div>
-        <button id="reset" type="button">Reset</button>
-        <input id="power_save" type="checkbox" checked>Power saving mode</button>
-    </div>
-    <script src='jquery.js'></script>
-    <script src='src/app.js'></script>
-  </body>
-
-  <script src='src/Thermostat.js'></script>
-</html> -->
-
-
-
 
 <html>
 
@@ -42,22 +14,22 @@
       <div class="col-md-2">
       </div>
       <div class="col-md-2">
-        <h1 id='colour'><span id='show_temperature'></span> &deg;C</h1><br>
-        <input id="power_save" type="checkbox" checked>Power saving mode</button>
+        <h1 id="colour"><span id="show_temperature"></span> &deg;C</h1><br>
+        <input id="power_save" type="checkbox" checked><a href="#" class="btn btn-primary btn-warning"><span class="glyphicon glyphicon-off"></span> POWER SAVING MODE</a></button>
       </div>
       <div class="col-md-2">
-        <button id='up' type="button">UP</button><br>
-        <button id="down" type="button">DOWN</button><br>
-        <button id="reset" type="button">Reset</button>
+        <a href="#" id="up"class="btn btn-primary btn-danger"><span class="glyphicon glyphicon-arrow-up"></span></a><br>
+        <a href="#" id="reset" class="btn btn-primary btn-success"></span> RESET</a><br>
+        <a href="#" id="down" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-arrow-down"></span></a>
       </div>
       <div class="col-md-2">
       </div>
       <div class="col-md-2">
       </div>
     </div>
-    <script src='jquery.js'></script>
-    <script src='src/app.js'></script>
+    <script src="jquery.js"></script>
+    <script src="src/app.js"></script>
   </body>
 
-  <script src='src/Thermostat.js'></script>
+  <script src="src/Thermostat.js"></script>
 </html>
