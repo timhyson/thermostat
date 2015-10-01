@@ -1,1 +1,10 @@
 <link rel="stylesheet" href="./public/styles/reset.css"/>
+
+h1 {
+  color: #fff;
+  font-family: weather;
+  font-size: 150px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.0;
+}

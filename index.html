@@ -3,33 +3,41 @@
 
   <head>
    <title>Thermostat</title>
+   <link rel="stylesheet" href="./public/styles/styles.css" />
    <link rel="stylesheet" href="./css/bootstrap.css" />
-   <!-- <link rel="stylesheet" href="./public/styles/styles.css" /> -->
   </head>
 
   <body>
     <div class="container-fluid">
-
-      <div class="col-md-2">
-      </div>
-      <div class="col-md-2">
-      </div>
-      <div class="col-md-2">
-        <h1 id="colour"><span id="show_temperature"></span> &deg;C</h1><br>
-        <input id="power_save" type="checkbox" checked><a href="#" class="btn btn-primary btn-warning"><span class="glyphicon glyphicon-off"></span> POWER SAVING MODE</a></button>
-      </div>
-      <div class="col-md-2">
-        <a href="#" id="up"class="btn btn-primary btn-danger"><span class="glyphicon glyphicon-arrow-up"></span></a><br>
-        <a href="#" id="reset" class="btn btn-primary btn-success"></span> RESET</a><br>
-        <a href="#" id="down" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-arrow-down"></span></a>
-      </div>
-      <div class="col-md-2">
-      </div>
-      <div class="col-md-2">
-      </div>
+      <row>
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-2">
+          <h1 id="colour"><span id="show_temperature"></span> &deg;C</h1><br>
+          <a href="#" class="power_save"><a href="#" class="btn btn-primary btn-warning"><span class="glyphicon glyphicon-off"></span> POWER SAVING MODE</a></button>
+        </div>
+        <div class="col-md-2">
+          <a href="#" id="up"class="btn btn-primary btn-danger"><span class="glyphicon glyphicon-arrow-up"></span></a><br>
+          <a href="#" id="down" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-arrow-down"></span></a><br>
+          <a href="#" id="reset" class="btn btn-primary btn-success"></span> RESET</a><br>
+        </div>
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-2">
+        </div>
+      </row>
+      <row>
+        <div id="weather"></div><br>
+        <button id="js-geolocation">Use Your Location</button>
+      </row>
     </div>
+
     <script src="jquery.js"></script>
     <script src="src/app.js"></script>
+    <script src="src/weather.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.0.2/jquery.simpleWeather.min.js"></script>
   </body>
 
   <script src="src/Thermostat.js"></script>
