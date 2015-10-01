@@ -1,4 +1,32 @@
 <!DOCTYPE html>
+<!-- <html>
+
+  <head>
+   <title>Thermostat</title>
+   <link rel="stylesheet" href="./css/bootstrap.css"/>
+  </head>
+
+  <body>
+    <div class='container-fluid'>
+      <div class='row'>
+        <div>
+        <h1><span id='show_temperature'></span> degrees</h1>
+        <button id='up' type="button"> UP</button>
+        <button id="down" type="button">DOWN</button>
+      </div>
+        <button id="reset" type="button">Reset</button>
+        <input id="power_save" type="checkbox" checked>Power saving mode</button>
+    </div>
+    <script src='jquery.js'></script>
+    <script src='src/app.js'></script>
+  </body>
+
+  <script src='src/Thermostat.js'></script>
+</html> -->
+
+
+
+
 <html>
 
   <head>
@@ -7,14 +35,26 @@
   </head>
 
   <body>
-    <p id='show_temperature'>  </p> degrees
-    <div class="container">
-      <button id='up' type="button"> UP</button>
-      <button id="down" type="button">DOWN</button>
-      <button id="reset" type="button">Reset</button>
-      <input id="power_save" type="checkbox" checked>Power saving mode</button>
-    </div>
+    <div class="container-fluid">
 
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-2">
+        <h1><span id='show_temperature'></span> &deg;C</h1><br>
+        <input id="power_save" type="checkbox" checked>Power saving mode</button>
+      </div>
+      <div class="col-md-2">
+        <button id='up' type="button">UP</button><br>
+        <button id="down" type="button">DOWN</button><br>
+        <button id="reset" type="button">Reset</button>
+      </div>
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-2">
+      </div>
+    </div>
     <script src='jquery.js'></script>
     <script src='src/app.js'></script>
   </body>
