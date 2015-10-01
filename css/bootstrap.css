@@ -11,6 +11,8 @@ html {
 }
 body {
   margin: 0;
+  background-image: url('../public/images/weather_wallpaper.jpg');
+  background-size: cover;
 }
 article,
 aside,
