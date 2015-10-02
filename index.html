@@ -16,7 +16,7 @@
         </div>
         <div class="col-md-2">
           <h1 id="colour"><span id="show_temperature"></span> &deg;C</h1><br>
-          <a href="#" class="power_save"><a href="#" class="btn btn-primary btn-warning"><span class="glyphicon glyphicon-off"></span> POWER SAVING MODE</a></button>
+          <input id="power_save" type="checkbox" checked><a href="#" class="btn btn-primary btn-warning"><span class="glyphicon glyphicon-off"></span> POWER SAVING MODE</a></button>
         </div>
         <div class="col-md-2">
           <a href="#" id="up"class="btn btn-primary btn-danger"><span class="glyphicon glyphicon-arrow-up"></span></a><br>
@@ -29,15 +29,17 @@
         </div>
       </row>
       <row>
-        <div id="weather"></div><br>
-        <button id="js-geolocation">Use Your Location</button>
+        <!-- <div id="weather"></div><br> -->
+        <div id="apitemp"></div>
+        <input id="apicity" type="text" class="form-control"></input>
+        <button id="js-geolocation">Update</button>
       </row>
     </div>
 
     <script src="jquery.js"></script>
     <script src="src/app.js"></script>
-    <script src="src/weather.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.0.2/jquery.simpleWeather.min.js"></script>
+    <!-- <script src="src/weather.js"></script> -->
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.0.2/jquery.simpleWeather.min.js"></script> -->
   </body>
 
   <script src="src/Thermostat.js"></script>

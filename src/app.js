@@ -28,7 +28,17 @@ $(document).ready(function() {
   $('#power_save').click(function() {
     thermostat.togglePowerSaving();
     display();
+  });
 
+  $('#js-geolocation').click(function() {
+    $.ajax({
+      url: 'http://api.openweathermap.org/data/2.5/weather?q=' + $('#apicity').val(),
+      cache: false,
+      success: function(json) {
+        if (json.cod == 200) {$('#apitemp').html((json.main.temp.toFixed(0)) - 273);
+      } else { console.log('test'); $('#apitemp').text('unknown city'); }
+      }
+    });
   });
 
 });
